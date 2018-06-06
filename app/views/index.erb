@@ -1,0 +1,23 @@
+<!doctype html>
+<head>
+<title>Kitchentory</title>
+</head>
+<body>
+    <div class="container">
+      <h1>Kitchentory</h1>
+    </div>
+    <nav>
+      <% if logged_in? %>
+        
+        <a href="/tweets/new"> Create Tweet </a>
+        <a href="/logout"> Log Out </a>
+        <p>Welcome, <%=current_user.username %></p>
+
+      <% else %>
+        <a href="/signup">Sign Up</a>
+        <a href="/login"> Login </a>
+      <%end %>
+
+    </nav>
+
+</body>
